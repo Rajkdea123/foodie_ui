@@ -1,4 +1,4 @@
-package com.example.foodappui.ui.theme
+package com.example.foodappui.uiLayer.screen.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
