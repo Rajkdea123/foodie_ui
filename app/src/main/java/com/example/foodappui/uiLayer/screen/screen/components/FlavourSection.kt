@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.example.foodappui.data.ProductFlowerState
 import com.example.foodappui.uiLayer.screen.theme.FoodAppUiTheme
 
+
 @Composable
 fun FlavorSection(
     modifier: Modifier= Modifier,

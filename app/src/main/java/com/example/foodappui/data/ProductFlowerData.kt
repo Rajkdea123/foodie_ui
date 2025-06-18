@@ -13,11 +13,11 @@ val ProductFlowerData = listOf(
         imgRes = R.drawable.img_burger, name = "Cheddar", price = "$0.79"
     ),
     ProductFlowerState(
-        imgRes = R.drawable.img_burger, name = "Bacon", price = "0.52"
+        imgRes = R.drawable.bacon, name = "Bacon", price = "0.52"
     ),
 
     ProductFlowerState(
-        imgRes = R.drawable.img_burger,
+        imgRes = R.drawable.cheddar,
         name = "Onion",
         price = "$0.28",
     ),

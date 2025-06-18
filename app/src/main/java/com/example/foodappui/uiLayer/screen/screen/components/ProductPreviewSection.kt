@@ -30,8 +30,7 @@ import com.example.foodappui.uiLayer.screen.theme.FoodAppUiTheme
 
 @Composable
 fun ProductPreviewSection(
-    modifier: Modifier = Modifier,
-    state: ProductPreviewState
+    modifier: Modifier = Modifier, state: ProductPreviewState
 ) {
     Box(
         modifier = modifier.height(IntrinsicSize.Max)
@@ -40,8 +39,7 @@ fun ProductPreviewSection(
             Modifier.padding(bottom = 24.dp)
         )
         Content(
-            state = state,
-            modifier = Modifier
+            state = state, modifier = Modifier
                 .statusBarsPadding()
                 .padding(top = 24.dp)
         )
@@ -64,25 +62,21 @@ private fun ProductBackground(
 
 @Composable
 private fun Content(
-    modifier: Modifier = Modifier,
-    state: ProductPreviewState
+    modifier: Modifier = Modifier, state: ProductPreviewState
 ) {
     ConstraintLayout(
         modifier = modifier.fillMaxWidth()
     ) {
         val (actionBar, highlights, productImg) = createRefs()
 
-        ActionBar(
-            headline = state.headline,
+        ActionBar(headline = state.headline,
             modifier = Modifier
                 .padding(horizontal = 19.dp)
                 .constrainAs(actionBar) {
                     top.linkTo(parent.top)
-                }
-        )
+                })
 
-        Image(
-            painter = painterResource(id = state.productImg),
+        Image(painter = painterResource(id = state.productImg),
             contentDescription = null,
             contentScale = ContentScale.FillHeight,
             modifier = Modifier
@@ -90,23 +84,19 @@ private fun Content(
                 .constrainAs(productImg) {
                     end.linkTo(parent.end)
                     top.linkTo(anchor = actionBar.bottom, margin = 20.dp)
-                }
-        )
+                })
 
-        ProductHighlights(
-            highlights = state.highlights,
+        ProductHighlights(highlights = state.highlights,
             modifier = Modifier.constrainAs(highlights) {
                 start.linkTo(anchor = parent.start, margin = 19.dp)
                 top.linkTo(productImg.top)
-            }
-        )
+            })
     }
 }
 
 @Composable
 private fun ActionBar(
-    modifier: Modifier = Modifier,
-    headline: String
+    modifier: Modifier = Modifier, headline: String
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -133,13 +123,12 @@ private fun CloseButton(
         contentColor = FoodAppUiTheme.colors.secondarySurface
     ) {
         Box(
-            modifier = modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
+            modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center
         ) {
             Icon(
-                painter = painterResource(id = R.drawable.img_burger),
+                painter = painterResource(id = R.drawable.close),
                 contentDescription = null,
-                modifier = Modifier.size(24.dp)
+                modifier = Modifier.size(12.dp)
             )
         }
     }

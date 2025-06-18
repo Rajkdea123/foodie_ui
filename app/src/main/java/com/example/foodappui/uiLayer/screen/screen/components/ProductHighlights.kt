@@ -35,7 +35,6 @@ fun ProductHighlights(
                 colors = HighlightDefaults.colors(item.type)
             )
         }
-
     }
 }
 

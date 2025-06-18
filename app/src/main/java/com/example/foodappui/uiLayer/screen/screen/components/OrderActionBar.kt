@@ -113,7 +113,7 @@ private fun Selector(
          horizontalArrangement = Arrangement.spacedBy(16.dp)
      ){ 
          SelectorButton(
-             iconRes = R.drawable.img_burger,
+             iconRes = R.drawable.minus,
              contentColor = FoodAppUiTheme.colors.actionSurface,
              containerColor = FoodAppUiTheme.colors.onActionSurface,
              onClicked = onRemoveItemClicked
@@ -124,7 +124,7 @@ private fun Selector(
              style = FoodAppUiTheme.typography.titleLarge
          )
          SelectorButton(
-             iconRes = R.drawable.img_burger,
+             iconRes = R.drawable.plus,
              containerColor = FoodAppUiTheme.colors.secondarySurface,
              contentColor = FoodAppUiTheme.colors.onSecondarySurface,
              onClicked = onAddItemClicked
